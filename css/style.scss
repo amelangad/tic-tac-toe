@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;500&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Oswald', sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+
+
+//  section info
+  .info {
+    margin: 5% auto;
+    padding-top: 5%;
+    width: 80%;
+    height: 80vh;
+    border-radius: 20px;
+    background: rgba(117, 118, 185, 0.719);
+    box-shadow: inset 0 0 3em black;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+
+    .header {
+      margin: 0 auto;
+      font-size: 70px;
+      font-weight: 100;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 30px;
+      background: linear-gradient(to left, rgb(203, 175, 214), rgba(8, 2, 15, 0.623), rgb(253, 253, 253));
+      animation: gradient 10s ease-in-out infinite;
+      background-size: 300%;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(1px 3px 6px rgba(0, 0, 0, 0.9));
+
+      @keyframes gradient {
+        0% {
+          background-position: 0%;
+        }
+
+        50% {
+          background-position: 100%;
+        }
+
+        100% {
+          background-position: 0%;
+        }
+      }
+
+      ;
+
+
+    }
+
+    .wrapper {
+      margin: 0 auto;
+      display: flex;
+      width: 50%;
+      align-items: center;
+      justify-content: space-between;
+
+
+      .circle {
+        background: rgba(112, 86, 185, 0.479);
+        border: 1px solid rgba(112, 86, 185, 0.479);
+        ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        filter: drop-shadow(1px 3px 6px rgba(0, 0, 0, 0.9));
+        transition: .5s ease-in-out;
+
+        &:hover {
+          background: rgba(73, 39, 167, 0.644);
+          cursor: pointer;
+          transform: scale(1.1);
+        }
+
+        .smallCircle {
+          background: rgba(93, 94, 165, 0.582);
+          height: 120px;
+          width: 120px;
+          border-radius: 50%;
+          border: 1px solid rgba(112, 86, 185, 0.479);
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+
+      .crossWrapper {
+        position: relative;
+        top: -16px;
+        left: 70px;
+        width: 150px;
+        height: 150px;
+        transition: scale, .5s ease-in-out;
+
+        &:hover {
+          cursor: pointer;
+
+          .crossOne,
+          .crossTwo {
+            background: rgba(73, 39, 167, 0.644);
+            ;
+          }
+
+          transform: scale(1.1);
+
+        }
+
+        .crossOne {
+          background: rgba(112, 86, 185, 0.479);
+          border: 1px solid rgba(112, 86, 185, 0.479);
+          ;
+          border-radius: 5px;
+          filter: drop-shadow(1px 3px 6px rgba(0, 0, 0, 0.9));
+          height: 180px;
+          width: 16px;
+          transform: rotate(45deg);
+          position: absolute;
+
+        }
+
+        .crossTwo {
+          background: rgba(112, 86, 185, 0.479);
+          border: 1px solid rgba(112, 86, 185, 0.479);
+          ;
+          border-radius: 5px;
+          height: 180px;
+          width: 16px;
+          transform: rotate(-45deg);
+          position: absolute;
+          filter: drop-shadow(2px 5px 9px rgba(0, 0, 0, 2));
+
+        }
+
+
+      }
+    }}
+  }
+// section section
+  .playerMark {
+    color: white;
+    font-size: 3em;
+    padding-bottom: 20px;
+    text-align: center;
+
+    span {
+      color: rgba(117, 118, 185, 0.719);
+    }
+  }
+
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 8rem);
+    grid-template-rows: repeat(3, 8rem);
+
+    .field {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 3px solid white;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .circleClass {
+    background: black;}
+
+  i::before {
+    font-size: 80px;
+
+    .fa-circle-o {
+      text-align: center;
+      color: white;}
+
+    .fa-times {
+      color: white;
+    }
+  }
+
+  .crossClass {
+    background: black;}
+
+  .desc {
+    color: rgb(204, 148, 211);
+    font-size: 70px;}

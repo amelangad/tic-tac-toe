@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Oswald', sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: black;
+}
+
+body .info {
+  margin: 5% auto;
+  padding-top: 5%;
+  width: 80%;
+  height: 80vh;
+  border-radius: 20px;
+  background: rgba(117, 118, 185, 0.719);
+  -webkit-box-shadow: inset 0 0 3em black;
+          box-shadow: inset 0 0 3em black;
+  opacity: 0;
+  -webkit-transition: opacity 2s ease-in-out;
+  transition: opacity 2s ease-in-out;
+}
+
+body .info .header {
+  margin: 0 auto;
+  font-size: 70px;
+  font-weight: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+  background: -webkit-gradient(linear, right top, left top, from(#cbafd6), color-stop(rgba(8, 2, 15, 0.623)), to(#fdfdfd));
+  background: linear-gradient(to left, #cbafd6, rgba(8, 2, 15, 0.623), #fdfdfd);
+  -webkit-animation: gradient 10s ease-in-out infinite;
+          animation: gradient 10s ease-in-out infinite;
+  background-size: 300%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-filter: drop-shadow(1px 3px 6px rgba(0, 0, 0, 0.9));
+          filter: drop-shadow(1px 3px 6px rgba(0, 0, 0, 0.9));
+}
+
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0%;
+  }
+  50% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: 0%;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0%;
+  }
+  50% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: 0%;
+  }
+}
+
+body .info .wrapper {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .info .circle {
+  background: rgba(112, 86, 185, 0.479);
+  border: 1px solid rgba(112, 86, 185, 0.479);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  -webkit-filter: drop-shadow(1px 3px 6px rgba(0, 0, 0, 0.9));
+          filter: drop-shadow(1px 3px 6px rgba(0, 0, 0, 0.9));
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+body .info .circle:hover {
+  background: rgba(73, 39, 167, 0.644);
+  cursor: pointer;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+body .info .circle .smallCircle {
+  background: rgba(93, 94, 165, 0.582);
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  border: 1px solid rgba(112, 86, 185, 0.479);
+}
+
+body .info .circle .smallCircle:hover {
+  cursor: pointer;
+}
+
+body .info .crossWrapper {
+  position: relative;
+  top: -16px;
+  left: 70px;
+  width: 150px;
+  height: 150px;
+  -webkit-transition: scale, .5s ease-in-out;
+  transition: scale, .5s ease-in-out;
+}
+
+body .info .crossWrapper:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+body .info .crossWrapper:hover .crossOne, body .info .crossWrapper:hover .crossTwo {
+  background: rgba(73, 39, 167, 0.644);
+}
+
+body .info .crossWrapper .crossOne {
+  background: rgba(112, 86, 185, 0.479);
+  border: 1px solid rgba(112, 86, 185, 0.479);
+  border-radius: 5px;
+  -webkit-filter: drop-shadow(1px 3px 6px rgba(0, 0, 0, 0.9));
+          filter: drop-shadow(1px 3px 6px rgba(0, 0, 0, 0.9));
+  height: 180px;
+  width: 16px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  position: absolute;
+}
+
+body .info .crossWrapper .crossTwo {
+  background: rgba(112, 86, 185, 0.479);
+  border: 1px solid rgba(112, 86, 185, 0.479);
+  border-radius: 5px;
+  height: 180px;
+  width: 16px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  position: absolute;
+  -webkit-filter: drop-shadow(2px 5px 9px black);
+          filter: drop-shadow(2px 5px 9px black);
+}
+
+.playerMark {
+  color: white;
+  font-size: 3em;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.playerMark span {
+  color: rgba(117, 118, 185, 0.719);
+}
+
+.board {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (8rem)[3];
+      grid-template-columns: repeat(3, 8rem);
+  -ms-grid-rows: (8rem)[3];
+      grid-template-rows: repeat(3, 8rem);
+}
+
+.board .field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 3px solid white;
+}
+
+.board .field:hover {
+  cursor: pointer;
+}
+
+.circleClass {
+  background: black;
+}
+
+i::before {
+  font-size: 80px;
+}
+
+.fa-circle-o {
+  text-align: center;
+  color: white;
+}
+
+.fa-times {
+  color: white;
+}
+
+.crossClass {
+  background: black;
+}
+
+.desc {
+  color: #cc94d3;
+  font-size: 70px;
+}
+/*# sourceMappingURL=style.css.map */
