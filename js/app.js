@@ -112,9 +112,9 @@ const start = (window.onload = () => {
                     descEnd.opacity = 0;
                 }, 500);
                 if (currentClass === 'circleClass') {
-                    setTimeout(() => board.innerHTML = "Circle win!", 500);
+                    setTimeout(() => board.innerHTML = "Circle wins!", 500);
                 } else {
-                    setTimeout(() => board.innerHTML = "Cross win!", 500);
+                    setTimeout(() => board.innerHTML = "Cross wins!", 500);
                 }
             } else if (winners.some(item => (item.every(item => item.classList.contains(otherClass))))) {
                 setTimeout(() => {
